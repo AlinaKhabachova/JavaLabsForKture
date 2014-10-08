@@ -8,16 +8,15 @@ public class Var1
         int first = 1;
         int last = 100;
         
-        nextNumber: for (int i = first; i <= last; i++)
+       for (int i = first; i <= last; i++)
         {
             for (int j = 2; j < i; j++)
             {
-                if (i % j == 0)
-                    continue nextNumber;
-                else
+                if (i % j == 0) break;
+                else  
                 {
                     System.out.print(i + ", ");
-                    continue nextNumber;
+                    break;
                 }
             }
         }

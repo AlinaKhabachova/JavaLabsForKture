@@ -1,30 +1,27 @@
 package com.alina.labs.lab1.var2;
 
-import java.util.Arrays;
 import java.util.Random;
 
 public class Var2
 {
-    public void CreateArray()
+    public static void createArray(int size, int range)
     {
-        int[][] array = new int[10][10];
+        int[][] array = new int[size][size];
         Random rand = new Random();
         
-        for (int i = 0; i <10; i++)
-        {
-            for (int j = 0; j <10; j++)
+        for (int i = 0; i <size; i++)
+        {            
+            for (int j = 0; j <size; j++)
             {
-                array[i][j] = rand.nextInt(50);
-                System.out.printf("%d ", array[i][j]);
+                array[i][j] = rand.nextInt(range);
+                System.out.print(array[i][j] + " ");
             }
-            System.out.printf("\n");
+            System.out.println();
         }
     }
     
     public static void main(String[] args)
     {
-        Var2 obj = new Var2();
-        obj.CreateArray();
+        Var2.createArray(10, 50);
     }
-    
 }
