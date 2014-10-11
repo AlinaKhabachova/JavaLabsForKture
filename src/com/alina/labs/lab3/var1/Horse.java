@@ -7,5 +7,5 @@ class Horse extends ChessPiece
         super(x, y);
     }
     
-    void Move(){}
+    protected void Move(){}
 }
